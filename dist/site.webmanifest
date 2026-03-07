@@ -1,0 +1,15 @@
+{
+  "name": "PerioVoxAI",
+  "short_name": "PerioVoxAI",
+  "description": "Periodontal charting by voice. No assistant. No hardware. Currently free to use.",
+  "theme_color": "#F5FAFB",
+  "background_color": "#F5FAFB",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

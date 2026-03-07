@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PerioVoxAI | Periodontal charting by voice</title>
+    <meta
+      name="description"
+      content="PerioVoxAI lets dentists create complete periodontal charts by voice. No assistant. No hardware. Currently free to use."
+    />
+    <meta name="theme-color" content="#F5FAFB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PerioVoxAI | Periodontal charting by voice" />
+    <meta
+      property="og:description"
+      content="The software-first alternative to hardware-dependent periodontal charting. Browser-based, AI-assisted, and currently free to use."
+    />
+    <meta property="og:image" content="/periovox-logo.svg" />
+    <meta name="apple-mobile-web-app-title" content="PerioVoxAI" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EV0RZHYDN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      const PERIOVOX_GA_ID = 'G-3EV0RZHYDN';
+      const PERIOVOX_COOKIE_CONSENT_KEY = 'periovox-cookie-consent';
+
+      function periovoxReadConsent() {
+        try {
+          const rawConsent = window.localStorage.getItem(PERIOVOX_COOKIE_CONSENT_KEY);
+
+          if (!rawConsent) {
+            return { analytics: false, advertising: false, preferences: false };
+          }
+
+          const parsedConsent = JSON.parse(rawConsent);
+
+          return {
+            analytics: Boolean(parsedConsent && parsedConsent.analytics),
+            advertising: Boolean(parsedConsent && parsedConsent.advertising),
+            preferences: Boolean(parsedConsent && parsedConsent.preferences),
+          };
+        } catch (error) {
+          return { analytics: false, advertising: false, preferences: false };
+        }
+      }
+
+      function periovoxApplyGoogleConsent(consent) {
+        gtag('consent', 'default', {
+          analytics_storage: consent.analytics ? 'granted' : 'denied',
+          ad_storage: consent.advertising ? 'granted' : 'denied',
+          ad_user_data: consent.advertising ? 'granted' : 'denied',
+          ad_personalization: consent.advertising ? 'granted' : 'denied',
+          functionality_storage: consent.preferences ? 'granted' : 'denied',
+          personalization_storage: consent.preferences ? 'granted' : 'denied',
+          security_storage: 'granted',
+        });
+      }
+
+      window.__periovoxGaInitialized = false;
+      window.__periovoxInitGA = function __periovoxInitGA() {
+        if (window.__periovoxGaInitialized) {
+          return;
+        }
+
+        window['ga-disable-' + PERIOVOX_GA_ID] = false;
+        gtag('js', new Date());
+        gtag('config', 'G-3EV0RZHYDN');
+        window.__periovoxGaInitialized = true;
+      };
+
+      const periovoxConsent = periovoxReadConsent();
+      window['ga-disable-' + PERIOVOX_GA_ID] = !periovoxConsent.analytics;
+      periovoxApplyGoogleConsent(periovoxConsent);
+
+      if (periovoxConsent.analytics) {
+        window.__periovoxInitGA();
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-BCmF5u9L.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CaPM5GB3.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
