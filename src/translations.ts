@@ -93,6 +93,11 @@ export const translations = {
       title: "Standardized. Your way.",
       desc: "Switch seamlessly between ADA and FDI nomenclature systems."
     },
+    csvExport: {
+      tag: "Research & Audits",
+      title: "Export to .csv. Go beyond clinical use.",
+      desc: "Beyond daily clinical use, PerioVox helps professionals who want to go further by allowing periodontogram exports in .csv format for audits, case reviews, and research workflows."
+    },
     benefits: {
       list: [
         { title: "No assistant needed", desc: "Regain independence in your charting workflow." },
@@ -104,7 +109,9 @@ export const translations = {
     contact: {
       title: "We're here to help",
       desc: "Have suggestions, need assistance, or want to collaborate? Reach out to our team directly.",
-      button: "info@periovox.ai"
+      button: "info@periovox.ai",
+      whatsapp: "WhatsApp",
+      whatsappMsg: "Chat with us"
     },
     cta: {
       title: "Start using PerioVoxAI for free",
@@ -217,6 +224,11 @@ export const translations = {
       title: "Estandarizado. A tu manera.",
       desc: "Cambia sin problemas entre los sistemas de nomenclatura ADA y FDI."
     },
+    csvExport: {
+      tag: "Investigación y Auditorías",
+      title: "Exportación a .csv. Ve más allá del uso clínico.",
+      desc: "Más allá del uso clínico diario, PerioVox ayuda a los profesionales que quieren ir más allá al permitir exportaciones de periodontogramas en formato .csv para auditorías, revisiones de casos y flujos de trabajo de investigación."
+    },
     benefits: {
       list: [
         { title: "No necesitas asistente", desc: "Recupera la independencia en tu flujo de trabajo de periodontograma." },
@@ -228,7 +240,9 @@ export const translations = {
     contact: {
       title: "Estamos aquí para ayudar",
       desc: "¿Tienes sugerencias, necesitas asistencia o quieres colaborar? Contacta directamente con nuestro equipo.",
-      button: "info@periovox.ai"
+      button: "info@periovox.ai",
+      whatsapp: "WhatsApp",
+      whatsappMsg: "Chatea con nosotros"
     },
     cta: {
       title: "Empieza a usar PerioVoxAI gratis",
