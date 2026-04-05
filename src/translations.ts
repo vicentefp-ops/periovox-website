@@ -4,6 +4,7 @@ export const translations = {
       features: "Features",
       workflow: "Workflow",
       benefits: "Benefits",
+      openApi: "Open API",
       contact: "Contact",
       login: "Log in",
     },
@@ -74,6 +75,10 @@ export const translations = {
       title: "Complete charting. Zero friction.",
       desc: "A professional-grade periodontogram, populated instantly by your voice."
     },
+    changeDetection: {
+      title: "AI-Powered Change Detection",
+      desc: "PerioVox uses AI to compare periodontal charts across multiple visits, automatically identifying and highlighting meaningful changes in a clear and structured way. Track progression, detect improvement, and better understand how your patients evolve over time."
+    },
     language: {
       title: "Global reach, local comfort.",
       desc: "PerioVoxAI speaks your language. The interface is available in English and Spanish, while our advanced AI dictation engine supports over 40 languages worldwide.",
@@ -88,6 +93,14 @@ export const translations = {
     idra: {
       title: "IDRA, simple and visual.",
       desc: "Complex indices like IDRA now take just a few clicks. Highly visual, incredibly intuitive, and built directly from your existing clinical data."
+    },
+    patientReports: {
+      title: "AI-Generated Patient Reports",
+      desc: "Provide patients with instant access to their periodontal health summary via QR code, improving understanding and supporting treatment adherence."
+    },
+    openApi: {
+      title: "Built for Integration",
+      desc: "PerioVox provides a flexible API that enables seamless integration with external platforms, allowing clinics, software providers, and partners to incorporate AI-powered periodontal analysis into their workflows. We are open to collaborations with clinics, institutions, and industry partners."
     },
     nomenclature: {
       title: "Standardized. Your way.",
@@ -135,6 +148,7 @@ export const translations = {
       features: "Características",
       workflow: "Flujo de trabajo",
       benefits: "Beneficios",
+      openApi: "Open API",
       contact: "Contacto",
       login: "Iniciar sesión",
     },
@@ -205,6 +219,10 @@ export const translations = {
       title: "Periodontograma completo. Cero fricción.",
       desc: "Un periodontograma de nivel profesional, poblado al instante por tu voz."
     },
+    changeDetection: {
+      title: "Detección de cambios impulsada por IA",
+      desc: "PerioVox utiliza IA para comparar periodontogramas a lo largo de múltiples visitas, identificando y resaltando automáticamente cambios significativos de forma clara y estructurada. Realiza un seguimiento de la progresión, detecta mejoras y comprende mejor cómo evolucionan tus pacientes con el tiempo."
+    },
     language: {
       title: "Alcance global, comodidad local.",
       desc: "PerioVoxAI habla tu idioma. La interfaz está disponible en inglés y español, mientras que nuestro avanzado motor de dictado por IA admite más de 40 idiomas en todo el mundo.",
@@ -219,6 +237,14 @@ export const translations = {
     idra: {
       title: "IDRA, simple y visual.",
       desc: "Índices complejos como IDRA ahora toman solo unos pocos clics. Altamente visual, increíblemente intuitivo y construido directamente a partir de tus datos clínicos existentes."
+    },
+    patientReports: {
+      title: "Informes de pacientes generados por IA",
+      desc: "Proporciona a los pacientes acceso instantáneo a su resumen de salud periodontal mediante código QR, mejorando la comprensión y apoyando la adherencia al tratamiento."
+    },
+    openApi: {
+      title: "Diseñado para la integración",
+      desc: "PerioVox proporciona una API flexible que permite una integración perfecta con plataformas externas, permitiendo a clínicas, proveedores de software y socios incorporar el análisis periodontal impulsado por IA en sus flujos de trabajo. Estamos abiertos a colaboraciones con clínicas, instituciones y socios de la industria."
     },
     nomenclature: {
       title: "Estandarizado. A tu manera.",

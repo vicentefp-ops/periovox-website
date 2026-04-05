@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { UserMinus, Mic, Globe, Stethoscope, Users, Activity, Clock, FileWarning, Sparkles, BarChart3, Check, Facebook, Instagram, Linkedin, Cookie, X, Menu, FileSpreadsheet, MessageCircle } from "lucide-react";
+import { UserMinus, Mic, Globe, Stethoscope, Users, Activity, Clock, FileWarning, Sparkles, BarChart3, Check, Facebook, Instagram, Linkedin, Cookie, X, Menu, FileSpreadsheet, MessageCircle, Code } from "lucide-react";
 import { translations } from "./translations";
 
 export default function App() {
@@ -77,6 +77,7 @@ export default function App() {
           <a href="#features" onClick={(e) => scrollToSection(e, 'features')} className="hover:text-zinc-900 transition-colors">{t('nav.features')}</a>
           <a href="#how-it-works" onClick={(e) => scrollToSection(e, 'how-it-works')} className="hover:text-zinc-900 transition-colors">{t('nav.workflow')}</a>
           <a href="#benefits" onClick={(e) => scrollToSection(e, 'benefits')} className="hover:text-zinc-900 transition-colors">{t('nav.benefits')}</a>
+          <a href="#open-api" onClick={(e) => scrollToSection(e, 'open-api')} className="hover:text-zinc-900 transition-colors">{t('nav.openApi')}</a>
           <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="hover:text-zinc-900 transition-colors">{t('nav.contact')}</a>
         </div>
         <div className="flex items-center gap-4">
@@ -104,6 +105,7 @@ export default function App() {
             <a href="#features" onClick={(e) => { scrollToSection(e, 'features'); setIsMobileMenuOpen(false); }} className="border-b border-zinc-100 pb-4">{t('nav.features')}</a>
             <a href="#how-it-works" onClick={(e) => { scrollToSection(e, 'how-it-works'); setIsMobileMenuOpen(false); }} className="border-b border-zinc-100 pb-4">{t('nav.workflow')}</a>
             <a href="#benefits" onClick={(e) => { scrollToSection(e, 'benefits'); setIsMobileMenuOpen(false); }} className="border-b border-zinc-100 pb-4">{t('nav.benefits')}</a>
+            <a href="#open-api" onClick={(e) => { scrollToSection(e, 'open-api'); setIsMobileMenuOpen(false); }} className="border-b border-zinc-100 pb-4">{t('nav.openApi')}</a>
             <a href="#contact" onClick={(e) => { scrollToSection(e, 'contact'); setIsMobileMenuOpen(false); }} className="border-b border-zinc-100 pb-4">{t('nav.contact')}</a>
             <a href="https://app.periovox.ai" className="text-center text-white bg-[#0A0A0A] px-4 py-3 rounded-full hover:bg-zinc-800 transition-colors mt-4">
               {t('nav.login')}
@@ -541,8 +543,43 @@ export default function App() {
         </motion.div>
       </section>
 
+      {/* AI-Powered Change Detection Section */}
+      <section className="py-12 md:py-16 px-6 bg-sky-50/50 border-b border-sky-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="relative flex justify-center"
+            >
+              <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-zinc-100 flex flex-col items-center text-center">
+                <Activity className="w-16 h-16 text-sky-500 mb-6" />
+                <h3 className="text-2xl font-medium text-sky-900 mb-2">Automated Analysis</h3>
+                <p className="text-zinc-500 font-light">Comparing visits in real-time</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-sky-900">
+                {t('changeDetection.title')}
+              </h2>
+              <p className="text-xl text-zinc-500 font-light leading-relaxed">
+                {t('changeDetection.desc')}
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Language Support Section */}
-      <section className="py-12 md:py-16 px-6 bg-sky-50/50 border-y border-sky-100">
+      <section className="py-12 md:py-16 px-6 bg-white border-b border-zinc-100">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -660,6 +697,38 @@ export default function App() {
               className="w-full rounded-2xl border border-zinc-200 shadow-xl shadow-sky-900/5"
               referrerPolicy="no-referrer"
             />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* AI-Generated Patient Reports Section */}
+      <section className="py-12 md:py-16 px-6 max-w-[85rem] mx-auto bg-sky-50/30 rounded-3xl my-12">
+        <div className="grid md:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="md:col-span-5 lg:col-span-4"
+          >
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-sky-900">
+              {t('patientReports.title')}
+            </h2>
+            <p className="text-xl text-zinc-500 font-light leading-relaxed">
+              {t('patientReports.desc')}
+            </p>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="md:col-span-7 lg:col-span-8 grid grid-cols-3 gap-4"
+          >
+            <img src="/QRPatient.png" alt="Patient QR Code" className="rounded-2xl border border-zinc-200 shadow-xl" referrerPolicy="no-referrer" />
+            <img src="/InfoPatient1.jpg" alt="Patient Info 1" className="rounded-2xl border border-zinc-200 shadow-xl" referrerPolicy="no-referrer" />
+            <img src="/InfoPatient2.jpg" alt="Patient Info 2" className="rounded-2xl border border-zinc-200 shadow-xl" referrerPolicy="no-referrer" />
           </motion.div>
         </div>
       </section>
@@ -821,6 +890,55 @@ export default function App() {
         </div>
       </section>
 
+      {/* Built for Integration Section */}
+      <section id="open-api" className="py-12 md:py-16 px-6 bg-white border-b border-zinc-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <div className="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center mb-8">
+                <Code className="w-8 h-8 text-sky-600" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-6 text-sky-900">
+                {t('openApi.title')}
+              </h2>
+              <p className="text-xl text-zinc-500 font-light leading-relaxed">
+                {t('openApi.desc')}
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="relative flex justify-center"
+            >
+              <div className="bg-zinc-900 p-8 rounded-[2rem] shadow-2xl border border-zinc-800 w-full max-w-md">
+                <div className="flex gap-2 mb-4">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
+                </div>
+                <pre className="text-sky-400 font-mono text-sm overflow-x-auto">
+                  <code>{`{
+  "status": "connected",
+  "api": "periovox-v1",
+  "features": [
+    "periodontal-analysis",
+    "charting-sync"
+  ]
+}`}</code>
+                </pre>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-6 md:py-10 px-6 bg-gradient-to-b from-white to-sky-50/50 border-t border-zinc-100">
         <div className="max-w-3xl mx-auto text-center">
@@ -961,6 +1079,9 @@ export default function App() {
                 </a>
                 <a href="https://www.linkedin.com/company/periovox-ai/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-500 hover:border-sky-500 hover:text-sky-500 transition-colors bg-white">
                   <Linkedin className="w-4 h-4" />
+                </a>
+                <a href="https://wa.me/34690957910" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-500 hover:border-green-500 hover:text-green-500 transition-colors bg-white">
+                  <MessageCircle className="w-4 h-4" />
                 </a>
               </div>
             </div>
